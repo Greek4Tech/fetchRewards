@@ -50,68 +50,80 @@ function Form() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>
-                Full Name:
-                <input
-                    type="text"
+            <div class="form-group">
+                <label for="exampleInputFullName">Full Name:</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="exampleInputFullName" 
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                 />
-            </label>
+            </div>
             <br />
-            <label>
-                Email:
-                <input
-                    type="email"
+            <div class="form-group">
+                <label for="exampleInputEmail">Email</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="exampleInputEmail" 
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                 />
-            </label>
+            </div>
             <br />
-            <label>
-                Password:
-                <input
-                    type="password"
+            <div class="form-group">
+                <label for="exampleInputPassword">Password</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="exampleInputPassword" 
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                 />
-            </label>
+            </div>
             <br />
-            <label>
-                Occupation:
-                <select
-                    value={selectedOccupation}
-                    onChange={(event) => setSelectedOccupation(event.target.value)}
-                >
-                    <option value="" disabled>
-                        Select an occupation
-                    </option>
-                    {occupations.map((occupation) => (
-                        <option key={occupation} value={occupation}>
-                            {occupation}
-                        </option>
-                    ))}
-                </select>
-            </label>
+                <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Occupation</label>
+        <select 
+            class="custom-select mr-sm-2" 
+            id="inlineFormCustomSelect" 
+            value={selectedOccupation}
+            onChange={(event) => setSelectedOccupation(event.target.value)}
+        >
+            <option value="" disabled>Select an occupation</option>
+            {occupations.map((occupation) => (
+                <option key={occupation} value={occupation}>
+                    {occupation}
+                </option>
+            ))}
+        </select>
+        </div>
+    </div>
+
             <br />
-            <label>
-                State:
-                <select
-                    value={selectedState}
-                    onChange={(event) => setSelectedState(event.target.value)}
-                >
-                    <option value="" disabled>
-                        Select a state
-                    </option>
-                    {states.map((state) => (
-                        <option key={state.name} value={state.abbreviation}>
-                            {state.name}
-                        </option>
-                    ))}
-                </select>
-            </label>
+            <div class="form-row align-items-center">
+    <div class="col-auto my-1">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">State</label>
+      <select 
+        class="custom-select mr-sm-2" 
+        id="inlineFormCustomSelect" 
+        value={selectedState}
+        onChange={(event) => setSelectedState(event.target.value)}
+      >
+        <option value="" disabled>Select a state</option>
+        {states.map((state) => (
+            <option key={state.name} value={state.abbreviation}>
+                {state.name}
+            </option>
+        ))}
+      </select>
+    </div>
+</div>
+
             <br />
-            <button type="submit">Submit</button>
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
             {response && <p>Response: {JSON.stringify(response.data)}</p>}
         </form>
     );
