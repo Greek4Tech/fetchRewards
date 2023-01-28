@@ -50,7 +50,7 @@ function Form() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div class="form-group">
+            <div class="form-group row">
                 <label for="exampleInputFullName">Full Name:</label>
                 <input 
                     type="text" 
@@ -75,7 +75,7 @@ function Form() {
             <div class="form-group">
                 <label for="exampleInputPassword">Password</label>
                 <input 
-                    type="email" 
+                    type="password" 
                     class="form-control" 
                     id="exampleInputPassword" 
                     value={password}
@@ -123,7 +123,7 @@ function Form() {
 </div>
 
             <br />
-            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             {response && <p>Response: {JSON.stringify(response.data)}</p>}
         </form>
     );
