@@ -2,7 +2,7 @@ body {
   background-color: pink;
   display: grid;
   justify-content: space-around;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .btn, .btn-primary, .btn-lg{
@@ -11,13 +11,13 @@ body {
 }
 
 
-.form-wrapper {
+/* .form-wrapper {
   width: 80%;
   margin: 0 auto;
-}
+} */
 
-.input-field {
-  width: 30em;
+.form-control,.input-field {
+  width: 65%;
 }
 
 

@@ -66,7 +66,7 @@ function Form() {
                 <label for="exampleInputEmail">Email</label>
                 <input
                     type="email"
-                    class="form-control"
+                    class="form-control input-field"
                     id="exampleInputEmail"
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
@@ -77,7 +77,7 @@ function Form() {
                 <label for="exampleInputPassword">Password</label>
                 <input
                     type="password"
-                    class="form-control"
+                    class="form-control input-field"
                     id="exampleInputPassword"
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
@@ -127,8 +127,9 @@ function Form() {
             <div class="response">
                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             </div>
-
-            {response && <p class="adjust">Response: {JSON.stringify(response.data)}</p>}
+            <div class="input-field">                
+            {response && <p class="">Response: {JSON.stringify(response.data)}</p>}
+            </div>
 
 
         </form>
