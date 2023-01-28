@@ -49,12 +49,13 @@ function Form() {
     };
 
     return (
+        
         <form onSubmit={handleSubmit}>
-            <div class="form-group row">
+            <div class="form-group">
                 <label for="exampleInputFullName">Full Name:</label>
                 <input 
                     type="text" 
-                    class="form-control" 
+                    class="form-control input-field" 
                     id="exampleInputFullName" 
                     value={name}
                     onChange={(event) => setName(event.target.value)}
@@ -87,7 +88,7 @@ function Form() {
         <div class="col-auto my-1">
         <label class="mr-sm-2" for="inlineFormCustomSelect">Occupation</label>
         <select 
-            class="custom-select mr-sm-2" 
+            class="form-control input-field" 
             id="inlineFormCustomSelect" 
             value={selectedOccupation}
             onChange={(event) => setSelectedOccupation(event.target.value)}
@@ -107,7 +108,7 @@ function Form() {
     <div class="col-auto my-1">
       <label class="mr-sm-2" for="inlineFormCustomSelect">State</label>
       <select 
-        class="custom-select mr-sm-2" 
+        class="form-control input-field" 
         id="inlineFormCustomSelect" 
         value={selectedState}
         onChange={(event) => setSelectedState(event.target.value)}
@@ -123,9 +124,15 @@ function Form() {
 </div>
 
             <br />
+            <div class="response">
             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-            {response && <p>Response: {JSON.stringify(response.data)}</p>}
+            </div>
+            
+            {response && <p class="adjust">Response: {JSON.stringify(response.data)}</p>}
+            
+          
         </form>
+        
     );
 }
 

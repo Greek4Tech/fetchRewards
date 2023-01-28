@@ -2,20 +2,32 @@ body {
   background-color: pink;
   display: grid;
   justify-content: space-around;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
-.btn-primary{
-  margin: 1em;
+.btn, .btn-primary, .btn-lg{
   background-color: #2196f3;
-  margin-left: 2em;
+  display: flex;
 }
 
-.alwaysMid {
+
+.form-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.input-field {
+  width: 30em;
+}
+
+
+
+
+/* .alwaysMid {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* .form {
     background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
