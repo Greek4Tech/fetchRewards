@@ -5,24 +5,6 @@ body {
   margin: 1rem;
 }
 
-.btn, .btn-primary, .btn-lg{
-  background-color: #2196f3;
-  display: flex;
-}
-
-
-/* .form-wrapper {
-  width: 80%;
-  margin: 0 auto;
-} */
-
-.form-control,.input-field {
-  width: 65%;
-}
-
-
-
-
 /* .alwaysMid {
   display: flex;
   justify-content: center;
