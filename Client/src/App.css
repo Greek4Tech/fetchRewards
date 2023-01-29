@@ -1,18 +1,19 @@
-body {
-  background-color: pink;
-  display: grid;
-  justify-content: space-around;
-  margin: 1rem;
+.form-control {
+  display: block;
+  width: 80%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  padding-left: 0.5em;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-/* .alwaysMid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .form {
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
-    background-size: cover;
-    background-position: center;
-} */
+body {
+  margin: 1em;
+  background-color: lightpink;
+}

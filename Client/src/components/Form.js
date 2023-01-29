@@ -13,6 +13,7 @@ function Form() {
     const [selectedState, setSelectedState] = useState("");
     const [response, setResponse] = useState(null);
 
+    // The useEffect hook fetches data from the endpoint "https://frontend-take-home.fetchrewards.com/form" and sets the occupations and states state variables with the data obtained from the endpoint.
     useEffect(() => {
         // fetch data from endpoint
         axios
@@ -25,7 +26,8 @@ function Form() {
                 console.error(err);
             });
     }, []);
-
+    
+    // The handleSubmit function is called when the form is submitted. It prevents the default form submission and checks that all fields are filled. If all fields are filled, it sends a POST request to the same endpoint, passing the form data as the request body. If the POST request is successful, the server returns a 201 status code with the created user object in the response and the function sets the response state variable with this response.
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!name || !email || !password || !selectedOccupation || !selectedState) {
@@ -51,44 +53,44 @@ function Form() {
     return (
 
         <form onSubmit={handleSubmit}>
-            <div class="form-group">
+            <div className="form-group">
                 <label for="exampleInputFullName">Full Name:</label>
                 <input
                     type="text"
-                    class="form-control input-field"
+                    className="form-control input-field"
                     id="exampleInputFullName"
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                 />
             </div>
             <br />
-            <div class="form-group">
+            <div className="form-group">
                 <label for="exampleInputEmail">Email</label>
                 <input
                     type="email"
-                    class="form-control input-field"
+                    className="form-control input-field"
                     id="exampleInputEmail"
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                 />
             </div>
             <br />
-            <div class="form-group">
+            <div className="form-group">
                 <label for="exampleInputPassword">Password</label>
                 <input
                     type="password"
-                    class="form-control input-field"
+                    className="form-control input-field"
                     id="exampleInputPassword"
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                 />
             </div>
             <br />
-            <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">Occupation</label>
+            <div className="form-row align-items-center">
+                <div className="col-auto my-1">
+                    <label className="mr-sm-2" for="inlineFormCustomSelect">Occupation</label>
                     <select
-                        class="form-control input-field"
+                        className="form-control input-field"
                         id="inlineFormCustomSelect"
                         value={selectedOccupation}
                         onChange={(event) => setSelectedOccupation(event.target.value)}
@@ -104,11 +106,11 @@ function Form() {
             </div>
 
             <br />
-            <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                    <label class="mr-sm-2" for="inlineFormCustomSelect">State</label>
+            <div className="form-row align-items-center">
+                <div className="col-auto my-1">
+                    <label className="mr-sm-2" for="inlineFormCustomSelect">State</label>
                     <select
-                        class="form-control input-field"
+                        className="form-control input-field"
                         id="inlineFormCustomSelect"
                         value={selectedState}
                         onChange={(event) => setSelectedState(event.target.value)}
@@ -124,11 +126,11 @@ function Form() {
             </div>
 
             <br />
-            <div class="response">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            <div className="response">
+                <button type="submit" className="btn btn-primary btn-lg">Submit</button>
             </div>
-            <div class="input-field">                
-            {response && <p class="">Response: {JSON.stringify(response.data)}</p>}
+            <div className="input-field">                
+            {response && <p className="">Response: {JSON.stringify(response.data)}</p>}
             </div>
 
 
