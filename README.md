@@ -1,5 +1,8 @@
 # fetchRewards
 
+![image](https://user-images.githubusercontent.com/97710680/215528673-caa314e1-07d4-415f-a2e7-a01d9720aef1.png)
+
+
 FormFetchRewards is a React component that implements a form for collecting user information. The form has fields for name, email, password, occupation and state. The component fetches the list of occupations and states from the endpoint "https://frontend-take-home.fetchrewards.com/form" when the component mounts and populates the respective dropdown fields with options. When the form is submitted, it checks that all fields are filled and if so, sends a POST request to the same endpoint, passing the form data as JSON body in the format specified in the prompt. If the post request is successful, the server returns a 201 status code with the created user object in the response and it is displayed.
 
 #Usage
