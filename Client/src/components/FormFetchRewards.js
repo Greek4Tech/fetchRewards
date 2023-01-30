@@ -114,7 +114,7 @@ function FormFetchRewards() {
                 Submit
             </Button>
 
-            <div className="">
+            <div className="properResponse">
                 {response && <p className="response">Response: {JSON.stringify(response.data)}</p>}
             </div>
 
