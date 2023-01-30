@@ -21,8 +21,3 @@ The component depends on the following packages:
 4. You'll need to install these packages in your project in order to use the FormFetchRewards component. You can install them by running the following command in your project directory:
 
 ```npm install react axios react-bootstrap```
-
-
-
-
-Regenerate response
